@@ -1,0 +1,49 @@
+# Lab 1 – Phishing Alert Investigation
+
+## Objective
+Investigate a phishing alert detected post‑delivery, validate authenticity using email security checks, and determine whether escalation is required.
+
+---
+
+## Step 1 – Identify Highest Priority Alert
+- Reviewed unassigned alerts in the SOC queue.  
+- Two medium‑priority alerts were present; selected the one that arrived first.  
+- **Alert Title:** *“Email marked as phishing after delivery.”*
+
+---
+
+## Step 2 – Assign & Update Status
+- Assigned the alert to myself.  
+- Changed status from **“Awaiting Action” → “In Progress”** to signal ownership to SOC teammates.
+
+---
+
+## Step 3 – Investigation
+- Read the alert description to gather context.  
+- Automated analysis flagged an email as phishing post‑delivery.  
+- **Sender:** “Microsoft Support” `<support@microsoft.com>`  
+- **Recipient:** Eddie Huffman (IT Manager)  
+- **Subject:** Microsoft Teams price increase  
+- **Attachment:** Urgent download request  
+
+### Security Checks
+- **SPF (Sender Policy Framework):** Failed → sending mail server not authorized.  
+- **DKIM (DomainKeys Identified Mail):** Failed → integrity/signature invalid.  
+
+### Assessment
+Both checks failing strongly indicate spoofing. The attachment is likely malicious and could enable privilege escalation or compromise of the organization’s network.
+
+---
+
+## Step 4 – Analyst Actions
+- Added analyst comment summarizing findings.  
+- Updated severity: **Medium to Critical**.  
+- Updated verdict: **True Positive**.  
+- Escalated alert to Level 2 analyst for deeper investigation and containment.
+
+---
+
+## Lessons Learned
+- SPF/DKIM validation is critical in confirming sender authenticity.  
+- Attackers often exploit urgency (“download immediately”) to trick recipients.  
+

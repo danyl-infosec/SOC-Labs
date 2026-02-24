@@ -10,7 +10,7 @@ I am passionate about cybersecurity and eager to begin my professional journey. 
 
 | Skill                                  | Associated Project |
 |----------------------------------------|--------------------|
-| Alert Triage and Escalation            | <a href="https://github.com/danyl-infosec/SOC-Labs/blob/main/Labs/Phishing%20Alert%20Triage%20%26%20Escalation">Triage and Escalation Lab</a>|
+| Alert Triage and Escalation            | <a href="https://github.com/danyl-infosec/Alert-Triage-and-Escalation-Lab/blob/main/README.md">Triage and Escalation Lab</a>|
 
 
 
